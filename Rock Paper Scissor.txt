@@ -1,0 +1,66 @@
+import random
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+print("Welcome to Rock, Paper and Scissor Game!")
+comp_choice = random.randint(1,3)
+user_choice = input("Enter Your Choice: \n1-Rock\n2-Paper\n3-Scissor\n")
+user_choice = int(user_choice)
+#Computer choices
+if comp_choice == 1:
+    print("Computer's Choice : ")
+    print(rock)
+elif comp_choice == 2:
+    print("Computer's Choice : ")
+    print(paper)
+else:
+    print("Computer's Choice : ")
+    print(scissors)
+# User Choices
+if user_choice == 1:
+    print("Your Choice : ")
+    print(rock)
+elif user_choice == 2:
+    print("Your Choice : ")
+    print(paper)
+else:
+    print("Your Choice : ")
+    print(scissors)
+
+#Condition Check
+#Rock wins against scissors.
+#Scissors win against paper.
+#Paper wins against rock.
+if comp_choice == user_choice:
+    print("Draw")
+elif comp_choice == 1 and user_choice==3:
+    print("You Lose")
+elif comp_choice == 3 and user_choice == 2:
+    print("You Lose")
+elif comp_choice == 2 and user_choice == 1:
+    print("You Lose")
+else:
+    print("You Win")
